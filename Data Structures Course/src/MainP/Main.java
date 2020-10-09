@@ -143,20 +143,20 @@ public class Main
         try 
         {
              do{
-             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-             input = bufferedReader.readLine();
-             number = Integer.parseInt(input);
-            //return number;
-             if(number<minOption||number>maxOption)
-                 System.out.println(" *Choice must be between 0-4..try again...");
-             }while(number<minOption||number>maxOption);
+                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                 input = bufferedReader.readLine();
+                 number = Integer.parseInt(input);
+                //return number;
+                 if(number<minOption||number>maxOption)
+                     System.out.println(" *Choice must be between 0-4..try again...");
+                 }while(number<minOption||number>maxOption);
          } 
         catch (NumberFormatException ex) 
         {
             System.out.println("@Not a number !ERROR readAnswer*");
         } catch (IOException e) 
         {
-           e.printStackTrace();
+            e.printStackTrace();
         }
         return number;
 
@@ -169,12 +169,12 @@ public class Main
         try 
         {
              do{
-             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-             input = bufferedReader.readLine();
-             number = Integer.parseInt(input);
-             //return number;
-             if(number<1)
-                 System.out.println(" *Key must be greater than 1..try again..");
+                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                 input = bufferedReader.readLine();
+                 number = Integer.parseInt(input);
+                 //return number;
+                 if(number<1)
+                     System.out.println(" *Key must be greater than 1..try again..");
              }while(number<1);
          } 
         catch (NumberFormatException ex) 
@@ -182,7 +182,7 @@ public class Main
             System.out.println("@Not a number !ERROR READKEY");
         } catch (IOException e) 
         {
-           e.printStackTrace();
+            e.printStackTrace();
         }
         return number;
 
@@ -190,7 +190,7 @@ public class Main
    
    public int readPos()
    {
-            String input = null;
+        String input = null;
         int number = 0;
         try 
         {
