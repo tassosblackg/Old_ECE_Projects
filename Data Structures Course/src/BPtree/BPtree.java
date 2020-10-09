@@ -1,18 +1,18 @@
 /*+--------------------------------------+
- *|Anastasios Karageorgiadis                            |
- *|Am.:2013030135                                     |
- *|LabTeam: LAB21124955                             |                                            
- *|Project2o DATA structures                         _|                           
+ *|Anastasios Karageorgiadis              |
+ *|Am.:2013030135                         |
+ *|LabTeam: LAB21124955                   |                                            
+ *|Project2o DATA structures              |                           
  *|_______________________________________|
  *
- *VAsikh klassh pu ta ylopoiei ola
+ *Vasikh klassh pu ta ylopoiei ola
  *
  * Edw vriskontai oi methodoi ths eisagwghs, anazhthshs(kai me tus dyo tropous),kai diagrafhs
  * Diagrafh: de douleyei teliws swsta...px.8ewroume oti to kleidi pu 8eloume na svhsume vrisketai kai ston patera
- *alla yparxei oloklhros o algorithmos mesa sthn methodo opote mporeite na deite pws douleuei
+ * alla yparxei oloklhros o algorithmos mesa sthn methodo opote mporeite na deite pws douleuei
  * epsihs sthn methodo searchKinN pu thn xrhsimopoioume gt anzhthsh tu kleidiou pou 8eloume na svhsoume ston patera
- *den elenxoume thn periptwsh pu to kleidi den yparxei...
- *aytes oi ateleies yparxoun logo elei4hs xronou gia peraiterw enasxolhsh....logw e3etastikhs..
+ * den elenxoume thn periptwsh pu to kleidi den yparxei...
+ 
  */
 package BPtree;
 
@@ -182,19 +182,19 @@ public class BPtree {
                 pnode.insertKey(node.getkeys(N/2), (N-1-pnode.getNumOfkeys()) );//gra4e to kleidi
                 pnode.setNofKeys(pnode.getNumOfkeys()+1);//increase number of keys in node
                 //set parent node
-              node1.setParent(node.getParent());
-              node2.setParent(node.getParent());
+              	node1.setParent(node.getParent());
+              	node2.setParent(node.getParent());
              }  
              else//if it's the first node it;s doesn't have parent..
              {
-              // System.out.println(" messaio kleidi");
-              // System.out.println(" kleidi N/2="+node.getkeys(N/2));
+               // System.out.println(" messaio kleidi");
+               // System.out.println(" kleidi N/2="+node.getkeys(N/2));
                pnode.insertKey(node.getkeys(N/2),(N-1) );//eisagwgh sthn teleytaia 8esh tu pinaka
-              // System.out.println(" parent key="+pnode.getkeys(N-1));
+               // System.out.println(" parent key="+pnode.getkeys(N-1));
                pnode.setNofKeys(pnode.getNumOfkeys()+1);//increase number of keys in parent node
                //System.out.println(" @@@@@@@@@@@@@@");
-           //System.out.println(" @ PARENT");
-          // pnode.printNode();
+               //System.out.println(" @ PARENT");
+               // pnode.printNode();
                //set parent to children
                node1.setParent(0);
                node2.setParent(0);
@@ -309,15 +309,15 @@ public class BPtree {
            {
                 //read father node
                System.out.println("#parent= "+node.getParent()+" **");
-                pnode= this.readSerialObj( node.getParent());//diavase kai fwrtwse ton patera tu fylou pu 8a kaneis split
+               pnode= this.readSerialObj( node.getParent());//diavase kai fwrtwse ton patera tu fylou pu 8a kaneis split
                this.NumbOfInAcc++;
                pnode.insertKey(node.getkeys(N/2),(N-1-pnode.getNumOfkeys()) );
           
                pnode.setNofKeys(pnode.getNumOfkeys()+1);//increase number of keys in parent node
                
-                //set parent node
-                node1.setParent(node.getParent());
-                node2.setParent(node.getParent());
+	       //set parent node
+	       node1.setParent(node.getParent());
+	       node2.setParent(node.getParent());
            }
            this.NofNodes=this.NofNodes+1;//increase number of nodes,one node will be override the old one --ayton pu egine split
            //for loop like before--copy node's keys to new children
@@ -566,7 +566,7 @@ public class BPtree {
        }
        else//den ypaxoun kleidia se ayto to evros
        {
-            System.out.println("||Search by keys in a range [ "+downLimit+" "+upLimit+"] has finished...here are the results..");
+           System.out.println("||Search by keys in a range [ "+downLimit+" "+upLimit+"] has finished...here are the results..");
            System.out.println(" |There aren't any keys in this rage, in the tree!Sorry...");
            System.out.println(" ______________________________________________________");
        }
@@ -638,14 +638,14 @@ public class BPtree {
              System.out.println("||Delete method starts.....(BPtree calss)...\n ");
              this.DelAcc=0;
              BPnode node=new BPnode(N);
-              node=this.readSerialObj(0);
-              int[]pos=new int[1];
-              node=this.search4node(node,key,pos);
-              this.DelAcc=this.DelAcc+this.Sacc;//prosthese tis prosvaseis kata thn anazhthsh
-              int i=0;
-              boolean found =false;
-              int Fpos=0;
-              //4a3e gia to kleidi
+             node=this.readSerialObj(0);
+             int[]pos=new int[1];
+             node=this.search4node(node,key,pos);
+             this.DelAcc=this.DelAcc+this.Sacc;//prosthese tis prosvaseis kata thn anazhthsh
+             int i=0;
+             boolean found =false;
+             int Fpos=0;
+             //4a3e gia to kleidi
              while( (i<node.getNumOfkeys() )&&(found==false) )
              {
      
@@ -688,7 +688,7 @@ public class BPtree {
                                       for(int j=Fpos; j>=1; j--)
                                       {
                                             node.setkey(node.getkeys(j-1),j);
-                                             node.setDatPointers(node.getDatPnt(j-1), j);//shift pointers
+                                            node.setDatPointers(node.getDatPnt(j-1), j);//shift pointers
                                        }  
                                      
                                                                          
@@ -826,7 +826,7 @@ public class BPtree {
                out.close();
                
                 // Get the bytes of the serialized object
-	     byte[] DataPage = new byte[pageSize];
+	       byte[] DataPage = new byte[pageSize];
                byte[] buf = bos.toByteArray(); // Creates a newly allocated byte array.
                System.arraycopy( buf, 0, DataPage, 0, buf.length); // Copy buf data to DataPage of DataPageSize
                
@@ -859,8 +859,8 @@ public class BPtree {
          // Read from file
          BPnode deserializedObject = null;
          try{
-                    //System.out.println(" position2read="+pos);
-                    RandomAccessFile MyFile = new RandomAccessFile (fileName, "r");
+               //System.out.println(" position2read="+pos);
+               RandomAccessFile MyFile = new RandomAccessFile (fileName, "r");
 	       byte[] buf = new byte[pageSize];
 	       MyFile.seek(pos*pageSize);
 	       MyFile.read(buf);
